@@ -16,7 +16,6 @@
         "volume",
         "network",
         "bluetooth",
-        "battery",
         "systray",
         "clock",
         "notifications"
@@ -52,14 +51,14 @@
       ]
     }
   },
-  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.monitorSpecific": true,
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": true,
   "bar.workspaces.showAllActive": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
   "bar.battery.label": false,
   "notifications.monitor": 0,
-  "menus.clock.weather.location": "Argentina",
+  "menus.clock.weather.location": "America/Argentina/Santa_Fe",
   "menus.clock.weather.unit": "metric",
   "menus.dashboard.powermenu.avatar.image": "/mnt/NAS_Tuqui/Multimedia/Imágenes/Fotos_perfil/20240120_194409_preview.jpeg",
   "theme.bar.buttons.modules.kbLayout.enableBorder": false,

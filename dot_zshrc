@@ -147,6 +147,9 @@ alias lg="lazygit"
 # Comandos chezmoi
 alias ca="chezmoi add"
 # alias cc="chezmoi cd && git add . && git commit -m "" && git push"
+alias ce="chezmoi edit"
+alias ccd="chezmoi cd"
+alias cap="chezmoi apply && source ~/.zshrc"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
