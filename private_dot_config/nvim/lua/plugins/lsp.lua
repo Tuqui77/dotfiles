@@ -7,6 +7,10 @@ return {
       lspconfig.yamlls.setup({
         settings = {
           yaml = {
+            schemaStore = {
+              enable = false,
+              url = "",
+            },
             schemas = {
               ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.30.0/all.json"] = {
                 "*.yaml",

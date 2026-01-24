@@ -137,6 +137,7 @@ alias lsl="eza --color=always --long --icons=always --no-time --no-user"
 
 # Comandos Kubernetes
 alias k="kubectl"
+alias homepagerr="k apply -f /home/Tuqui/Documentos/Homelab/apps/homepage/manifests/configMap.yaml && k rollout restart -n dashboard deployment homepage"
 
 # Comandos de git
 alias gst="git status"
