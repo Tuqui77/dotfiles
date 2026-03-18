@@ -9,3 +9,11 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 vim.opt.switchbuf = ""
+vim.opt.fixendofline = false
+vim.opt.title = false
+
+require("neotest").setup({
+  adapters = {
+    require("neotest-dotnet")
+  }
+})

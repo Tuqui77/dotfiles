@@ -125,14 +125,14 @@ alias dbupdate="dotnet ef database update"
 # Comandos del sistema
 alias ff="clear && fastfetch"
 alias update="sudo pacman -Syu --noconfirm"
-alias hyprconf="nvim .config/hypr/hyprland.conf"
 alias ashconf="sudo nvim .config/ashell/config.toml"
 alias bkp.sh="~/Documentos/scripts/backup.sh"
 
 # Reemplazo de comandos de Linux
 alias cd="z"
-alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
-alias lsl="eza --color=always --long --icons=always --no-time --no-user"
+alias lss="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias lst="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --tree --level=3"
+alias lsl="eza --color=always --long --icons=always --no-time"
 
 
 # Comandos Kubernetes
@@ -151,6 +151,16 @@ alias ca="chezmoi add"
 alias ce="chezmoi edit"
 alias ccd="chezmoi cd"
 alias cap="chezmoi apply && source ~/.zshrc"
+
+# Alias de configuración
+alias zconf="nvim ~/.zshrc"
+alias src="source ~/.zshrc"
+alias kittyconf="nvim  ~/.config/kitty/kitty.conf"
+alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
+
+# Funciones
+function mann () {man $1 | bat -l man}
+function mkdir+ () {mkdir -p $1 && cd $1}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -197,3 +207,16 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+HISTTIMEFORMAT="%d/%m/%y %T "
+export PATH="$HOME/.local/bin:$PATH"
+
+DISABLE_AUTO_TITLE="true"
+
+set_tab_title() {
+  print -Pn "\e]2;${PWD:t}\a"
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd set_tab_title
+
+set_tab_title
