@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
+  event = { "BufWritePre", "BufReadPre" },
   cmd = { "ConformInfo" },
   keys = {
     {
@@ -23,6 +23,7 @@ return {
       python = { "isort", "black" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
       yaml = { "prettierd", "prettier", stop_after_first = true },
+      cs = { "csharpier" }
     },
     -- Set default options
     default_format_opts = {
