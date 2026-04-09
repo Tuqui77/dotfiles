@@ -133,11 +133,14 @@ alias cd="z"
 alias lss="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lst="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --tree --level=3"
 alias lsl="eza --color=always --long --icons=always --no-time"
+alias docker="podman"
+alias rebuild="podman compose down --remove-orphans && podman compose up --build -d"
 
 
 # Comandos Kubernetes
 alias k="kubectl"
-alias homepagerr="k apply -f /home/Tuqui/Documentos/Homelab/apps/homepage/manifests/configMap.yaml && k rollout restart -n dashboard deployment homepage"
+alias homepagerr="k apply -f /home/Tuqui/Documentos/Repositorios/Homelab/apps/homepage/manifests/configMap.yaml && k rollout restart -n dashboard deployment homepage"
+alias kerrors="kubectl get pods -A --field-selector status.phase!=Running"
 
 # Comandos de git
 alias gst="git status"
@@ -220,3 +223,6 @@ autoload -Uz add-zsh-hook
 add-zsh-hook precmd set_tab_title
 
 set_tab_title
+
+# opencode
+export PATH=/home/Tuqui/.opencode/bin:$PATH
