@@ -117,7 +117,7 @@ export EDITOR=nvim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Comandos Entity Framework
-alias mgira="dotnet ef migrarions add"
+alias migra="dotnet ef migrations add"
 alias migrarem="dotnet ef migrations remove"
 alias migralist="dotnet ef migrations list"
 alias dbupdate="dotnet ef database update"
@@ -127,6 +127,7 @@ alias ff="clear && fastfetch"
 alias update="sudo pacman -Syu --noconfirm"
 alias ashconf="sudo nvim .config/ashell/config.toml"
 alias bkp.sh="~/Documentos/scripts/backup.sh"
+alias kernelcheck="uname -r && ls /lib/modules" #Compara la versión de kernel que está corriendo con la de los módulos instalados para ver si hace falta reiniciar luego de un update
 
 # Reemplazo de comandos de Linux
 alias cd="z"
@@ -226,3 +227,4 @@ set_tab_title
 
 # opencode
 export PATH=/home/Tuqui/.opencode/bin:$PATH
+export PATH="$PATH:/home/Tuqui/.dotnet/tools"
